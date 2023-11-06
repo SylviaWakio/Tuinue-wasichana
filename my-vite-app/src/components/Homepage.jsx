@@ -1,4 +1,5 @@
 import React from "react";
+import  {Link} from "react-router-dom"
 import "./Home.css";
 
 const Homepage = () => {
@@ -31,7 +32,9 @@ const Homepage = () => {
           <div className="heading-start-a">START A CHARITY</div>
           <p className="div">Lorem ipsum dolor sit amet</p>
           <div className="text-wrapper-2">consectetur adipisicing elit</div>
+          <Link to="/signup" >
           <div className="link-sign-in">Sign In</div>
+          </Link>
         </div>
       </div>
     </div>
