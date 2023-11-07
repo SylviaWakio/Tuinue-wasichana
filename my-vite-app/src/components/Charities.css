@@ -94,4 +94,35 @@
     color: #007bff;
     text-decoration: none;
   }
+  /* Add a class to style each individual charity entry */
+.charity-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the image */
+  .charity-entry img {
+    max-width: 220px; /* Set the maximum width for the image */
+    height: 200px;
+    margin-right: 20px; /* Add some spacing between the image and text */
+  }
+  
+  /* Style the description text */
+  .charity-entry p {
+    flex: 1; /* Allow the text to flexibly take up available space */
+    font-size: 16px;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .section .charities-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Adjust the layout of the unordered list */
+  .section .charities-list ul {
+    list-style: none;
+    padding: 0;
+  }
   
