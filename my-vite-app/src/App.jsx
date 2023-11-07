@@ -6,6 +6,7 @@ import Welcome from './components/Welcome';
 import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import AboutUs from './components/AboutUs';
+import Charities from './components/Charities';
 // import Navbar from './components/Navbar';
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
           <Route path="/welcome" element={<Welcome />} /> 
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/signup" element={<Signup />} />
-          <Route path="/about" element={<AboutUs/>} /> */
+          <Route path="/about" element={<AboutUs/>} /> 
+          <Route path="/charities" element={<Charities/>} />
         
         </Routes>
       </Router>
