@@ -5,21 +5,21 @@ import "./Charities.css";
 const Charities = () => {
   const charities = [
     {
-      name: "Charity 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "./img/hero_bg_bw_1.jpg", // Image path
+      name: "Days for Girls",
+      description: "Days for Girls is a global organization that aims to increase access to menstrual care and education for girls and women. They provide sustainable, reusable menstrual hygiene kits to girls and women in need around the world.",
+      image: "/img/img_sm_1.jpg", // Image path
       link: "/donate/charity1",
     },
     {
-      name: "Charity 2",
-      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/img/charity2.jpg", // Image path
+      name: "Huru International",
+      description: "Huru International focuses on providing reusable, sustainable menstrual products to girls and women in underserved communities, particularly in Africa. They offer Huru Kits, which include reusable pads and menstrual health education.",
+      image: "/img/hero_bg_bw_1.jpg", // Image path
       link: "/donate/charity2",
     },
     {
-      name: "Charity 3",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/img/charity3.jpg", // Image path
+      name: "ZanaAfrica Foundation",
+      description: "The ZanaAfrica Foundation is dedicated to empowering adolescent girls in Kenya through education, health, and hygiene programs. They provide girls with access to sanitary pads and support comprehensive menstrual health education.",
+      image: "/img/person_7.jpg", // Image path
       link: "/donate/charity3",
     },
   ];
