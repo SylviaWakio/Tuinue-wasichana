@@ -10,7 +10,9 @@ const Homepage = () => {
         <p className="heading-together">Together we can make a difference</p>
       </div>
       <div className="link">
+        <Link to="/charities">
         <div className="text-wrapper">Donate Now</div>
+        </Link>
       </div>
       <div className="div-probootstrap">
         <div className="div-item">
