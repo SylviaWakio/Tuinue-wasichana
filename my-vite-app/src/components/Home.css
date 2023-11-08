@@ -49,9 +49,9 @@
       background-color: #d261d4;
       border: 1px solid;
       height: 49px;
-      left: 390px;
+      left: 330px;
       position: absolute;
-      top: 450px;
+      top: 200px;
       width: 162px;
     }
     
@@ -84,10 +84,10 @@
       border-color: #ffffff4c;
       border-right-style: solid;
       border-right-width: 1px;
-      height: 139px;
+      height: 200px;
       left: 390px;
       position: absolute;
-      top: 0;
+      top: -60px;
       width: 380px;
     }
     
@@ -150,6 +150,36 @@
       white-space: nowrap;
       width: 182px;
     }
+
+    .section .text-wrapper-3 {
+      color: #ffffffb2;
+      font-family: "Lato-Light", Helvetica;
+      font-size: 16px;
+      font-weight: 300;
+      height: 19px;
+      left: 100px;
+      letter-spacing: 0;
+      line-height: 24px;
+      position: absolute;
+      top: 96px;
+      white-space: nowrap;
+      width: 182px;
+    }
+
+    .section .text-wrapper-4 {
+      color: #ffffffb2;
+      font-family: "Lato-Light", Helvetica;
+      font-size: 16px;
+      font-weight: 300;
+      height: 19px;
+      left: 100px;
+      letter-spacing: 0;
+      line-height: 24px;
+      position: absolute;
+      top: 120px;
+      white-space: nowrap;
+      width: 182px;
+    }
     
     .section .link-sign-in {
       color: #ffffff;
@@ -162,7 +192,7 @@
       line-height: 24px;
       position: absolute;
       text-decoration: underline;
-      top: 96px;
+      top: 144px;
       white-space: nowrap;
       width: 46px;
     }
@@ -172,10 +202,10 @@
       border-color: #ffffff4c;
       border-right-style: solid;
       border-right-width: 1px;
-      height: 139px;
+      height: 200px;
       left: 770px;
       position: absolute;
-      top: 0;
+      top: -60px;
       width: 380px;
     }
     
@@ -205,17 +235,17 @@
       line-height: 24px;
       position: absolute;
       text-decoration: underline;
-      top: 96px;
+      top: 144px;
       white-space: nowrap;
       width: 71px;
     }
     
     .section .div-item-3 {
       background-color: #d261d4;
-      height: 139px;
+      height: 200px;
       left: 1150px;
       position: absolute;
-      top: 0;
+      top: -60px;
       width: 380px;
     }
     

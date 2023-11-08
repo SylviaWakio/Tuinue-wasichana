@@ -14,9 +14,6 @@ const Navbar = () => {
       <div className="link">
         <div className="enlight">CHARITY</div>
       </div>
-      <Link to="/signup">
-        <button className="welcome-button">Register</button>
-      </Link>
       <button className='list-item-link-home'>
         <Link to="/">Home</Link>
       </button>
