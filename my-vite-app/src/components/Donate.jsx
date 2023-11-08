@@ -93,4 +93,3 @@ const Donate = () => {
 };
 
 export default Donate;
-25262262
