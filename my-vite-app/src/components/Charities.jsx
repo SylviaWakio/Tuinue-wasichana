@@ -55,4 +55,3 @@ const Charities = () => {
 };
 
 export default Charities;
-1414y22h2j
