@@ -18,4 +18,3 @@ const About_Us = () => {
 };
 
 export default About_Us ;
-3445566
