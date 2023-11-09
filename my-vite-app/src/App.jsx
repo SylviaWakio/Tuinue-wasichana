@@ -7,6 +7,8 @@ import Homepage from './components/Homepage';
 import AboutUs from './components/AboutUs';
 import Charities from './components/Charities';
 import Navbar from './components/Navbar';
+import Donate from './components/Donate';
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/charities" element={<Charities />} />
+          <Route path="/Donate" element={<Donate/>} />
         </Routes>
       </Router>
     </div>

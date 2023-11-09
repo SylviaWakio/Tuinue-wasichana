@@ -1,31 +1,46 @@
 import React, { useState } from "react";
+import "./Donate.css";
 
 const Donate = () => {
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [amount, setAmount] = useState(0);
   const [isDonationSubmitted, setDonationSubmitted] = useState(false);
 
   const handleDonate = (event) => {
     event.preventDefault();
 
-    if (isAnonymous || (name && email && amount > 0)) {
-      // Donation processing logic here
-      if (isAnonymous) {
-        // Handle anonymous donation
-        console.log("Anonymous donation");
-      } else {
-        // Handle donation with user information
-        console.log(`Donation by ${name} (${email}) of $${amount}`);
-      }
-
-      // Reset the form and provide feedback to the user
-      setIsAnonymous(false);
-      setName("");
-      setEmail("");
-      setAmount(0);
-      setDonationSubmitted(true);
+    if (isAnonymous || (name && email && phoneNumber && amount > 0)) {
+      fetch('https://charities-donor.onrender.com/api/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: isAnonymous ? 'Anonymous' : name,
+          email,
+          phoneNumber,
+          amount,
+        }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Reset the form and provide feedback to the user upon successful donation
+            setIsAnonymous(false);
+            setName("");
+            setEmail("");
+            setPhoneNumber("");
+            setAmount(0);
+            setDonationSubmitted(true);
+          } else {
+            throw new Error('Failed to submit donation');
+          }
+        })
+        .catch((error) => {
+          alert(`Failed to submit donation: ${error.message}`);
+        });
     } else {
       alert("Please fill in all the required fields.");
     }
@@ -68,6 +83,17 @@ const Donate = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+
+            <label>
+              Phone Number:
+              <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 required
               />
             </label>
