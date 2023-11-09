@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Donate.css"; // Import the CSS file
 
 const Donate = () => {
   const [isAnonymous, setIsAnonymous] = useState(false);
@@ -32,13 +33,13 @@ const Donate = () => {
   };
 
   return (
-    <div>
+    <div className="donate-container">
       <h2>Donate Page</h2>
       {isDonationSubmitted && (
         <p>Thank you for your donation!</p>
       )}
       <form onSubmit={handleDonate}>
-        <div>
+        <div className="anonymous-checkbox">
           <label>
             <input
               type="checkbox"
@@ -50,7 +51,7 @@ const Donate = () => {
         </div>
 
         {!isAnonymous && (
-          <div>
+          <div className="donor-info">
             <label>
               Name:
               <input
@@ -86,7 +87,7 @@ const Donate = () => {
           </div>
         )}
 
-        <button type="submit">Donate</button>
+        <button type="submit" className="donate-button">Donate</button>
       </form>
     </div>
   );
