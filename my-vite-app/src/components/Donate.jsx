@@ -13,7 +13,7 @@ const Donate = () => {
     event.preventDefault();
 
     if (isAnonymous || (name && email && phoneNumber && amount > 0)) {
-      fetch('https://charities-donor.onrender.com/api/donate', {
+      fetch('https://tuinuewasichana.onrender.com/donations/donate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

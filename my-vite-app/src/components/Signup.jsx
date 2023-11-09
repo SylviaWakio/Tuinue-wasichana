@@ -104,7 +104,7 @@ function Authorization() {
                 id="email"
                 placeholder="Email"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <div className="input-container">
@@ -114,7 +114,7 @@ function Authorization() {
                 id="password"
                 placeholder="Password"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <div className="input-container">
@@ -122,7 +122,7 @@ function Authorization() {
             <select
               id="role"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
+              className="w-80 p-2 border rounded border-blue-200 mb-2"
             >
               <option value="admin">Admin</option>
               <option value="doner">Doner</option>
@@ -147,7 +147,7 @@ function Authorization() {
                 id="firstName"
                 placeholder="First Name"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <div className="input-container">
@@ -157,7 +157,7 @@ function Authorization() {
               id="lastName"
               placeholder="Last Name"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
+              className="w-80p-2 border rounded border-blue-200 mb-2"
             />
             </div>
             <div className="input-container">
@@ -167,7 +167,7 @@ function Authorization() {
                 id="username"
                 placeholder="Username"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <div className="input-container">
@@ -177,7 +177,7 @@ function Authorization() {
                 id="signup-email"
                 placeholder="Email"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <div className="input-container">
@@ -185,7 +185,7 @@ function Authorization() {
             <select
               id="role"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
+              className="w-80 p-2 border rounded border-blue-200 mb-2"
             >
               <option value="doner">Doner</option>
               <option value="admin">Admin</option>
@@ -199,11 +199,11 @@ function Authorization() {
                 id="signup-password"
                 placeholder="Password"
                 required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
+                className="w-80 p-2 border rounded border-blue-200 mb-2"
               />
             </div>
             <button
-              className=" bg-gray-600 text-white rounded-md py-2 px-4 text-lg font-semibold mt-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className=" bg-gray-600 text-white rounded-md py-2 px-4 text-lg font-semibold mt-4 hover:bg-blue-700focus:outline-none focus:ring-2 focus:ring-blue-600"
               type="submit"
             >
               Sign Up
