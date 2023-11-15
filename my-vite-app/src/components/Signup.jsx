@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./Signup.css";
 
-function Authorization() {
+function Signup() {
   const [isLoginForm, setIsLoginForm] = useState(true);
 
   const toggleForm = () => {
@@ -86,142 +87,121 @@ function Authorization() {
       return false;
     }
   }
-
+  
   return (
-    <div className="min-h-screen w-screen bg-gray-300 flex justify-center items-center md:p-4">
-      <div className="bg-gray-700 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-1/2 p-4 rounded-lg">
-        <h1 className="text-2xl font-semibold bg-dark bg-pink-700 flex justify-center align-center">
-          {isLoginForm ? 'Login' : 'Sign Up'}
-        </h1>
-        {isLoginForm ? (
-          <form className="text-left" onSubmit={handleSubmit}>
-            {/* Input fields and labels for login */}
-            {/* You can use JSX to avoid selecting elements by ID */}
-            <div className="input-container">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Email"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <div className="input-container">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Password"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <div className="input-container">
-            <label htmlFor="purpose">Purpose</label>
+    <div className="section">
+      <div className="overlap-group">
+      </div>
+    <div>
+      <h1>{isLoginForm ? 'Login' : 'Sign Up'}</h1>
+      {isLoginForm ? (
+        <form onSubmit={handleSubmit}>
+          {/* Input fields and labels for login */}
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="role">Purpose</label>
             <select
               id="role"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
             >
               <option value="admin">Admin</option>
-              <option value="doner">Doner</option>
+              <option value="donor">Donor</option>
               <option value="others">Others</option>
             </select>
-            </div>
+          </div>
 
-            <button
-              className="bg-blue-600 text-white rounded-md py-2 px-4 text-lg font-semibold mt-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
-              type="submit"
-            >
-              Login
-            </button>
-          </form>
-        ) : (
-          <form className="text-left" onSubmit={handleRegistration}>
-            {/* Input fields and labels for registration */}
-            <div className="input-container">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                placeholder="First Name"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <div className="input-container">
+          <button type="submit">Login</button>
+        </form>
+      ) : (
+        <form onSubmit={handleRegistration}>
+          {/* Input fields and labels for registration */}
+          <div>
+            <label htmlFor="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div>
             <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               id="lastName"
               placeholder="Last Name"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
             />
-            </div>
-            <div className="input-container">
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                id="username"
-                placeholder="Username"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <div className="input-container">
-              <label htmlFor="signup-email">Email</label>
-              <input
-                type="text"
-                id="signup-email"
-                placeholder="Email"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <div className="input-container">
-            <label htmlFor="purpose">Purpose</label>
+          </div>
+          <div>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="signup-email">Email</label>
+            <input
+              type="text"
+              id="signup-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="role">Purpose</label>
             <select
               id="role"
               required
-              className="w-full p-2 border rounded border-blue-200 mb-2"
             >
-              <option value="doner">Doner</option>
+              <option value="donor">Donor</option>
               <option value="admin">Admin</option>
               <option value="others">Others</option>
             </select>
-            </div>
-            <div className="input-container">
-              <label htmlFor="signup-password">Password</label>
-              <input
-                type="password"
-                id="signup-password"
-                placeholder="Password"
-                required
-                className="w-full p-2 border rounded border-blue-200 mb-2"
-              />
-            </div>
-            <button
-              className=" bg-gray-600 text-white rounded-md py-2 px-4 text-lg font-semibold mt-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
-              type="submit"
-            >
-              Sign Up
-            </button>
-          </form>
-        )}
-        <p>
-          {isLoginForm ? "Don't have an account? " : "Already have an account? "}
-          <span
-            className="text-blue-600 cursor-pointer"
-            onClick={toggleForm}
-          >
-            Sign {isLoginForm ? 'up' : 'in'}
-          </span>
-        </p>
-      </div>
+          </div>
+          <div>
+            <label htmlFor="signup-password">Password</label>
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      )}
+      <p>
+        {isLoginForm ? "Don't have an account? " : "Already have an account? "}
+        <span
+          onClick={toggleForm}
+        >
+          Sign {isLoginForm ? 'up' : 'in'}
+        </span>
+      </p>
+    </div>
     </div>
   );
 }
 
-export default Authorization;
+export default Signup;
