@@ -10,11 +10,11 @@ body {
 
 form {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px; /* Set a maximum width */
-  width: 80%; /* Adjust width based on your design */
+  max-width: 400px;
+  width: 80%;
   text-align: center;
   margin: auto;
 }
@@ -22,53 +22,57 @@ form {
 h1 {
   color: #fff;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: bold;
-  color: #333; /* Change label color for better contrast */
+  color: #333;
 }
 
 input,
 select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: calc(100% - 30px); 
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 16px;
   box-sizing: border-box;
-  color: #000; /* Change text color to black */
+  color: #000;
+  background-color: #fff;
 }
 
-button {
-  background-color: #3498db;
+button[type="submit"] {
+  background-color: #d261d4;
   color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #2980b9;
+button[type="submit"]:hover {
+  background-color: #d261d4;
 }
 
 p {
-  margin-top: 16px;
+  margin-top: 15px;
   text-align: center;
 }
 
 span {
-  color: #3498db;
+  color: #d261d4;
   cursor: pointer;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   form {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
   }
 }

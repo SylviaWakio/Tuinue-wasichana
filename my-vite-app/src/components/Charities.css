@@ -3,9 +3,7 @@
   background-image: url(./section.png);
   background-position: center;
   background-size: cover;
-  height: 800px;
-  width: 100%;
-  position: relative;
+  padding: 50px 0;
 }
 
 .section .overlap-group {
@@ -61,21 +59,26 @@
 }
 
 .section .charities-list h2 {
-  font-size: 24px;
+  font-size: 2.5vw;
   margin-bottom: 10px;
 }
 
 .section .charities-list ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section .charities-list li {
-  margin-bottom: 20px;
+  margin: 10px; /* Adjust spacing */
+  width: calc(33.33% - 20px); /* Responsive width for columns */
+  text-align: center;
 }
 
 .section .charities-list h3 {
-  font-size: 20px;
+  font-size: 2vw;
 }
 
 .section .charities-list img {
@@ -86,7 +89,7 @@
 }
 
 .section .charities-list p {
-  font-size: 16px;
+  font-size: 1.5vw;
 }
 
 .section .charities-list a {
@@ -94,22 +97,22 @@
   text-decoration: none;
 }
 
-.charity-entry {
+.section .charity-entry {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
-.charity-entry img {
-  max-width: 200px;
-  height: 200px;
-  margin-right: 20px;
-  border: 1px solid #ddd; /* Border for the images */
-  border-radius: 5px; /* Border radius for the images */
+.section .charity-entry img {
+  max-width: 30%;
+  height: auto;
+  margin-right: 20px; /* Adjust spacing between image and text */
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.charity-entry p {
-  flex: 2;
+.section .charity-entry p {
+  flex: 1;
   font-size: 16px;
   margin: 0;
 }
