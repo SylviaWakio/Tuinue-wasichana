@@ -88,6 +88,9 @@ function Signup() {
   }
 
   return (
+    <div className="section">
+      <div className="overlap-group">
+      </div>
     <div>
       <h1>{isLoginForm ? 'Login' : 'Sign Up'}</h1>
       {isLoginForm ? (
@@ -95,7 +98,7 @@ function Signup() {
           <div>
             <label htmlFor="email">Email</label>
             <input
-              type="text"
+              type="email"
               id="email"
               placeholder="Enter your email"
               required
@@ -125,21 +128,11 @@ function Signup() {
       ) : (
         <form onSubmit={handleRegistration}>
           <div>
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="firstName">Name</label>
             <input
               type="text"
-              id="firstName"
-              placeholder="Enter your first name"
-              required
-              className="text-black" 
-            />
-          </div>
-          <div>
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              placeholder="Enter your last name"
+              id="Name"
+              placeholder="Enter your name"
               required
               className="text-black" 
             />
@@ -147,7 +140,7 @@ function Signup() {
           <div>
             <label htmlFor="username">Email</label>
             <input
-              type="text"
+              type="email"
               id="username"
               placeholder="Enter your username"
               required
@@ -164,14 +157,7 @@ function Signup() {
               className="text-black" 
             />
           </div>
-          <div>
-            <label htmlFor="role">Role</label>
-            <select id="role" required>
-              <option value="donor">Donor</option>
-              <option value="admin">Admin</option>
-              <option value="others">Others</option>
-            </select>
-          </div>
+
           <div>
             <label htmlFor="signup-password">Password</label>
             <input
@@ -181,6 +167,16 @@ function Signup() {
               required
             />
           </div>
+
+          <div>
+            <label htmlFor="role">Role</label>
+            <select id="role" required>
+              <option value="donor">Donor</option>
+              <option value="admin">Admin</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          
           <button type="submit">Sign Up</button>
         </form>
       )}
@@ -190,6 +186,7 @@ function Signup() {
           Sign {isLoginForm ? 'up' : 'in'}
         </span>
       </p>
+    </div>
     </div>
   );
 }
