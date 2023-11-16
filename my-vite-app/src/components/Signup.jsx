@@ -16,8 +16,6 @@ function Signup() {
 
     if (authenticateUser(email, password)) {
       alert("Login successful! Redirecting to the main page...");
-
-      // Redirect to the home page 
       window.location.href = '/';
     } else {
       alert("Invalid email or password. Please try again.");
@@ -31,8 +29,9 @@ function Signup() {
     const username = document.getElementById("username").value;
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
+    const role = document.getElementById("role").value;
 
-    if (registerUser(username, email, password)) {
+    if (validateEmail(email) && registerUser(username, email, password)) {
       alert("Account registered successfully. You can now log in.");
       setIsLoginForm(true);
     } else {
@@ -40,9 +39,14 @@ function Signup() {
     }
   };
 
+  const validateEmail = (email) => {
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  
   async function authenticateUser(email, password) {
     try {
-      // Make an API request to your server to authenticate the user
       const response = await fetch("/api/authenticate", {
         method: "POST",
         headers: {
@@ -50,12 +54,10 @@ function Signup() {
         },
         body: JSON.stringify({ email, password }),
       });
-  
+
       if (response.ok) {
-        // Authentication successful
         return true;
       } else {
-        // Authentication failed
         return false;
       }
     } catch (error) {
@@ -66,7 +68,6 @@ function Signup() {
 
   async function registerUser(username, email, password) {
     try {
-      // Make an API request to your server to register the user
       const response = await fetch("/api/register", {
         method: "POST",
         headers: {
@@ -74,12 +75,10 @@ function Signup() {
         },
         body: JSON.stringify({ username, email, password }),
       });
-  
+
       if (response.ok) {
-        // Registration successful
         return true;
       } else {
-        // Registration failed
         return false;
       }
     } catch (error) {
@@ -87,23 +86,20 @@ function Signup() {
       return false;
     }
   }
-  
+
   return (
-    <div className="section">
-      <div className="overlap-group">
-      </div>
     <div>
       <h1>{isLoginForm ? 'Login' : 'Sign Up'}</h1>
       {isLoginForm ? (
         <form onSubmit={handleSubmit}>
-          {/* Input fields and labels for login */}
           <div>
             <label htmlFor="email">Email</label>
             <input
               type="text"
               id="email"
-              placeholder="Email"
+              placeholder="Enter your email"
               required
+              className="text-black" 
             />
           </div>
           <div>
@@ -111,34 +107,31 @@ function Signup() {
             <input
               type="password"
               id="password"
-              placeholder="Password"
+              placeholder="Enter your password"
               required
+              className="text-black" 
             />
           </div>
           <div>
-            <label htmlFor="role">Purpose</label>
-            <select
-              id="role"
-              required
-            >
+            <label htmlFor="role">Role</label>
+            <select id="role" required>
               <option value="admin">Admin</option>
               <option value="donor">Donor</option>
               <option value="others">Others</option>
             </select>
           </div>
-
           <button type="submit">Login</button>
         </form>
       ) : (
         <form onSubmit={handleRegistration}>
-          {/* Input fields and labels for registration */}
           <div>
             <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               id="firstName"
-              placeholder="First Name"
+              placeholder="Enter your first name"
               required
+              className="text-black" 
             />
           </div>
           <div>
@@ -146,34 +139,34 @@ function Signup() {
             <input
               type="text"
               id="lastName"
-              placeholder="Last Name"
+              placeholder="Enter your last name"
               required
+              className="text-black" 
             />
           </div>
           <div>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Email</label>
             <input
               type="text"
               id="username"
-              placeholder="Username"
+              placeholder="Enter your username"
               required
+              className="text-black" 
             />
           </div>
           <div>
-            <label htmlFor="signup-email">Email</label>
+            <label htmlFor="signup-email">Username</label>
             <input
               type="text"
               id="signup-email"
-              placeholder="Email"
+              placeholder="Enter your email"
               required
+              className="text-black" 
             />
           </div>
           <div>
-            <label htmlFor="role">Purpose</label>
-            <select
-              id="role"
-              required
-            >
+            <label htmlFor="role">Role</label>
+            <select id="role" required>
               <option value="donor">Donor</option>
               <option value="admin">Admin</option>
               <option value="others">Others</option>
@@ -184,7 +177,7 @@ function Signup() {
             <input
               type="password"
               id="signup-password"
-              placeholder="Password"
+              placeholder="Enter your password"
               required
             />
           </div>
@@ -193,13 +186,10 @@ function Signup() {
       )}
       <p>
         {isLoginForm ? "Don't have an account? " : "Already have an account? "}
-        <span
-          onClick={toggleForm}
-        >
+        <span onClick={toggleForm}>
           Sign {isLoginForm ? 'up' : 'in'}
         </span>
       </p>
-    </div>
     </div>
   );
 }
